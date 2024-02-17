@@ -1,6 +1,9 @@
 # This Origami file defines the tree of files necessary for the EPUB format.
 @tree/merge(
-  boilerplate # Files don't depend on the book metadata or the stories
+  # Files that don't depend on the book metadata or the stories
+  boilerplate
+
+  # Files that do depend on the book metadata or the stories
   {
     EPUB = {
       index.xhtml = index.ori(markdown, book.yaml)
