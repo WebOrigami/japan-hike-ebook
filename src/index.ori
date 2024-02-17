@@ -1,3 +1,4 @@
+# Template for the core index.xhtml file that contains the book content
 (stories, bookData) => `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html 
