@@ -4,7 +4,8 @@
   "type": "module",
   "main": "main.js",
   "dependencies": {
-    "@weborigami/origami": "https://gitpkg.now.sh/WebOrigami/origami/async-tree?a386c40a"
+    "@weborigami/origami": "https://gitpkg.now.sh/WebOrigami/origami/async-tree?a386c40a",
+    "@weborigami/zip": "https://gitpkg.now.sh/WebOrigami/extensions/zip?9656ef64"
   },
   "scripts": {
     "build": "rm myths.epub; ori package:@weborigami/zip/epub src/ebook.ori > myths.epub",
