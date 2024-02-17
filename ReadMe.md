@@ -4,12 +4,14 @@ Generally speaking, an EPUB file is a ZIP file containing a specific set of file
 
 Origami is good for defining trees of content like this, so should be a reasonable way to programmatically generate an ebook in EPUB format. This project explores this idea to create a simple book using some myths from the related [Cherokee Myths](https://github.com/WebOrigami/cherokee-myths) sample Origami site.
 
-The following define the book's contents, and represent what the author would need to create:
+The following define the book's contents, and represent what the authors needs to create:
 
 - `markdown` contains markdown files for a number of stories; each file will become a chapter.
 - `book.yaml` file contains book metadata.
 
-The `src/ebook.ori` Origami file uses the above to define the complete tree of files necessary for the EPUB format. This tree will be compressed into ZIP format to create the final `.epub` file.
+The `src/ebook.ori` Origami file uses the above to define the complete tree of files necessary for the EPUB format. This includes translating the markdown to HTML, combining the chapters into an overall XHTML file, and generating a table of contents. To create a readable ebook, that virtual tree of files is compressed into ZIP format and saved as an `.epub` file.
+
+This example is currently very simple: it assumes a flat hierarchy of chapters, and has no images or styling.
 
 ## Building
 
