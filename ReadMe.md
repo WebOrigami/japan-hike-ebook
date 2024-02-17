@@ -17,7 +17,7 @@ To create a readable ebook, that virtual tree of files is compressed into ZIP fo
 
 This example is currently very simple: it assumes a flat hierarchy of chapters, and has no images or styling.
 
-## Building
+## Building the ebook
 
 To preview the files that will go into the ebook:
 
