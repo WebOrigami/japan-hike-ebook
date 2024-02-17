@@ -1,0 +1,36 @@
+(stories, bookData) => `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html 
+  xmlns="http://www.w3.org/1999/xhtml" 
+  xml:lang="en" 
+  lang="en" 
+  xmlns:epub="http://www.idpf.org/2007/ops"
+>
+  <head>
+    <title>{{ bookData/title }}</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  </head>
+  <body>  
+    <article>
+    <header>
+      <h1>{{ bookData/title }}</h1>
+      <doc-authors>
+        <doc-author>
+          <doc-author-name><a href="{{ bookData/site }}" target="_blank">{{ bookData/creator }}</a></doc-author-name>
+          <doc-author-affiliation>{{ bookData/affiliation }}</doc-author-affiliation>
+        </doc-author>
+      </doc-authors>
+      <doc-publication-date>{{ bookData/date }}</doc-publication-date>
+      <doc-abstract>{{ bookData/abstract }}</doc-abstract>
+    </header>
+    {{ @map(stories, (markdown, filename) => `
+    <section>
+      <h2 id="{{ slug.js(@basename(filename)) }}">{{ @basename(filename) }}</h2>
+      {{ @mdHtml(markdown) }}
+    </section>
+    `) }}  
+    </article>
+  </body>
+</html>
+`

@@ -1,0 +1,19 @@
+=`<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">code.google.com.epub-samples.wasteland-basic</dc:identifier>
+        <dc:title>{{ _/title }}</dc:title>
+        <dc:creator>{{ _/creator }}</dc:creator>
+        <dc:language>{{ _/language }}</dc:language>
+        <dc:date>{{ _/date }}</dc:date>
+        <meta property="dcterms:modified">{{ _/date }}T00:00:00Z</meta>
+    </metadata>
+    <manifest>
+        <item id="page" href="index.xhtml" media-type="application/xhtml+xml" />
+        <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
+    </manifest>
+    <spine>
+        <itemref idref="page" />
+    </spine>
+</package>
+`

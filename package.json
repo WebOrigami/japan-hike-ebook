@@ -1,0 +1,12 @@
+{
+  "name": "@weborigami/ebook-sample",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "main.js",
+  "dependencies": {
+    "@weborigami/origami": "https://gitpkg.now.sh/WebOrigami/origami/async-tree?a386c40a"
+  },
+  "scripts": {
+    "build": "rm myths.epub; ori package:@weborigami/zip/epub src/myths.ori > myths.epub"
+  }
+}

@@ -1,0 +1,7 @@
+@tree/merge(boilerplate, {
+  EPUB = {
+    index.xhtml = index.ori(markdown, book.yaml)
+    nav.xhtml = nav.ori(markdown)
+    package.opf = package.ori(book.yaml)
+  }
+})
