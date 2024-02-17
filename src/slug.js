@@ -1,3 +1,4 @@
+// Turn a file name into a slug with hyphens.
 export default function slug(filename) {
   let slug = filename.toLowerCase();
   // Remove some characters
