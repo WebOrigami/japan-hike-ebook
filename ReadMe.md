@@ -9,7 +9,11 @@ The following define the book's contents, and represent what the authors needs t
 - `markdown` contains markdown files for a number of stories; each file will become a chapter.
 - `book.yaml` file contains book metadata.
 
-The `src/ebook.ori` Origami file uses the above to define the complete tree of files necessary for the EPUB format. This includes translating the markdown to HTML, combining the chapters into an overall XHTML file, and generating a table of contents. To create a readable ebook, that virtual tree of files is compressed into ZIP format and saved as an `.epub` file.
+The `src/ebook.ori` Origami file uses the above to define the complete tree of files necessary for the EPUB format. This includes translating the markdown to HTML, combining the chapters into an overall XHTML file, and generating a table of contents. The complete virtual tree looks like this:
+
+![Diagram of the files in the sample EPUB book](diagram.svg)
+
+To create a readable ebook, that virtual tree of files is compressed into ZIP format and saved as an `.epub` file.
 
 This example is currently very simple: it assumes a flat hierarchy of chapters, and has no images or styling.
 

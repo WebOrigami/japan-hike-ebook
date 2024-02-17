@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "rm myths.epub; ori package:@weborigami/zip/epub src/ebook.ori > myths.epub",
+    "docs": "ori @svg src/ebook.ori > diagram.svg",
     "preview": "rm -r preview; ori @copy src/ebook.ori, @files/preview",
     "serve": "ori @serve @debug src/ebook.ori"
   }
