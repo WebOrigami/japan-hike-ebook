@@ -33,7 +33,7 @@ To view the files in a browser:
 $ npm run serve
 ```
 
-You can then browse files like the generated, virtual files like `EPUB/nav.xhtml`.
+You can then browse the generated, virtual files like `EPUB/nav.xhtml`.
 
 To build the ebook:
 
