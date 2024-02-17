@@ -19,7 +19,15 @@ To preview the files that will go into the ebook:
 $ npm run preview
 ```
 
-This will generate a `preview` folder.
+This will generate a `preview` folder containing everything that will go into the EPUB file.
+
+To view the files in a browser:
+
+```console
+$ npm run serve
+```
+
+You can then browse files like the generated, virtual files like `EPUB/nav.xhtml`.
 
 To build the ebook:
 
