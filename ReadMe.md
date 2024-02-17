@@ -17,7 +17,7 @@ To create a readable ebook, that virtual tree of files is compressed into ZIP fo
 
 This example is currently very simple: it assumes a flat hierarchy of chapters, and has no images or styling.
 
-## Building the ebook
+## Rebuilding the ebook
 
 To preview the files that will go into the ebook:
 
@@ -25,7 +25,7 @@ To preview the files that will go into the ebook:
 $ npm run preview
 ```
 
-This will generate a `preview` folder containing everything that will go into the EPUB file.
+This will regenerate the `preview` folder containing everything that will go into the EPUB file.
 
 To view the files in a browser:
 
@@ -41,4 +41,4 @@ To build the ebook:
 $ npm run build
 ```
 
-This will generate a `myths.epub` file that you should be able to open in an ebook reader app.
+This will regenerate the `myths.epub` file that you should be able to open in an ebook reader app.

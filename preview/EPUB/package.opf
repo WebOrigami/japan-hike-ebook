@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">code.google.com.epub-samples.wasteland-basic</dc:identifier>
+        <dc:title>Cherokee Myths</dc:title>
+        <dc:creator>Jan Miksovsky</dc:creator>
+        <dc:language>en-US</dc:language>
+        <dc:date>2024-02-16</dc:date>
+        <meta property="dcterms:modified">2024-02-16T00:00:00Z</meta>
+    </metadata>
+    <manifest>
+        <item id="page" href="index.xhtml" media-type="application/xhtml+xml" />
+        <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
+    </manifest>
+    <spine>
+        <itemref idref="page" />
+    </spine>
+</package>
