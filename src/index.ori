@@ -11,6 +11,20 @@
     <title>{{ bookData/title }}</title>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      h2 {
+        break-before: page;
+      }
+
+      img {
+        max-height: 70vh;
+        max-width: 100%;
+      }
+    </style>
   </head>
   <body>  
     <article>
@@ -25,10 +39,10 @@
       <doc-publication-date>{{ bookData/date }}</doc-publication-date>
       <doc-abstract>{{ bookData/abstract }}</doc-abstract>
     </header>
-    {{ @map(stories, (markdown, filename) => `
+    {{ @map(stories, (document, filename) => `
     <section>
-      <h2 id="{{ slug.js(@basename(filename)) }}">{{ @basename(filename) }}</h2>
-      {{ @mdHtml(markdown) }}
+      <h2 id="{{ @basename(filename) }}">{{ document/title }}</h2>
+      {{ marked.js(document/@text) }}
     </section>
     `) }}  
     </article>

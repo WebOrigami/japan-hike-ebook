@@ -6,9 +6,10 @@
   # Files that do depend on the book metadata or the stories
   {
     EPUB = {
-      index.xhtml = index.ori(markdown, book.yaml)
-      nav.xhtml = nav.ori(markdown)
-      package.opf = package.ori(book.yaml)
+      images = @map(content/images, @image/resize({ width: 1200 }))
+      index.xhtml = index.ori(content/markdown, content/book.yaml)
+      nav.xhtml = nav.ori(content/markdown)
+      package.opf = package.ori(content/book.yaml)
     }
   }
 )
