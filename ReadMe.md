@@ -30,7 +30,7 @@ This will regenerate the `preview` folder containing everything that will go int
 To view the files in a browser:
 
 ```console
-$ npm run serve
+$ npm run start
 ```
 
 You can then browse the generated, virtual files like `EPUB/nav.xhtml`.

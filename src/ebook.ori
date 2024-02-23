@@ -1,5 +1,5 @@
 # This Origami file defines the tree of files necessary for the EPUB format.
-@tree/merge(
+@merge(
   # Files that don't depend on the book metadata or the stories
   boilerplate
 
