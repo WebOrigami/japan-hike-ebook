@@ -43,3 +43,9 @@ $ npm run build
 ```
 
 This will regenerate the `japan-hike.epub` file that you should be able to open in an ebook reader app.
+
+## License
+
+The _Software_ here (the Origami program) is licensed via MIT License; see the LICENSE file.
+
+The book _content_ (the text and images) were created by Jan Miksovsky who holds the copyright. You are free to make copies of the EPUB file for personal use.
