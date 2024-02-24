@@ -17,6 +17,7 @@
       }
 
       h2 {
+        page-break-before: always;
         break-before: page;
       }
 
@@ -30,14 +31,13 @@
     <article>
     <header>
       <h1>{{ bookData/title }}</h1>
-      <doc-authors>
-        <doc-author>
-          <doc-author-name><a href="{{ bookData/site }}" target="_blank">{{ bookData/creator }}</a></doc-author-name>
-          <doc-author-affiliation>{{ bookData/affiliation }}</doc-author-affiliation>
-        </doc-author>
-      </doc-authors>
-      <doc-publication-date>{{ bookData/date }}</doc-publication-date>
-      <doc-abstract>{{ bookData/abstract }}</doc-abstract>
+      <p>
+        <a href="{{ bookData/site }}" target="_blank">{{ bookData/creator }}</a>
+        {{ bookData/date }}
+      </p>
+      <p>
+        {{ bookData/rights }}
+      </p>
     </header>
     {{ @map(stories, (document, filename) => `
     <section>
