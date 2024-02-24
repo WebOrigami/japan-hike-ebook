@@ -52,4 +52,4 @@ The book content (the text and images) were created by Jan Miksovsky who holds t
 
 ## Download the book
 
-You can find the book in the [japan-hike.epub](japan-hike.epub) file. This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
+Download the [japan-hike.epub](https://github.com/WebOrigami/ebook-sample/raw/main/japan-hike.epub) file. This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
