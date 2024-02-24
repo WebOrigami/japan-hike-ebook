@@ -46,6 +46,10 @@ This will regenerate the `japan-hike.epub` file that you should be able to open 
 
 ## License
 
-The _Software_ here (the Origami program) is licensed via MIT License; see the LICENSE file.
+The Software here (the Origami program) is licensed via MIT License; see the LICENSE file.
 
-The book _content_ (the text and images) were created by Jan Miksovsky who holds the copyright. You are free to make copies of the EPUB file for personal use.
+The book content (the text and images) were created by Jan Miksovsky who holds the copyright. You are free to make copies of the EPUB file for personal use.
+
+## Download the book
+
+You can find the book in the [japan-hike.epub](japan-hike.epub) file. This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
