@@ -2,7 +2,7 @@ This project explores using the [Origami](https://weborigami.org/language) langu
 
 ## Download the book
 
-Download the file: [japan-hike.epub](raw/main/japan-hike.epub)
+Download the file: [japan-hike.epub](./raw/main/japan-hike.epub)
 
 This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
 
