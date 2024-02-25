@@ -16,32 +16,59 @@
         font-family: Georgia, "Times New Roman", Times, serif;
       }
 
-      h2 {
-        page-break-before: always;
-        break-before: page;
+      h1 {
+        font-size: 1.5rem;
+        text-wrap: balance;
       }
 
       img {
         max-height: 70vh;
         max-width: 100%;
       }
+
+      section > h1,
+      .titlePage {
+        page-break-before: always;
+        break-before: page;
+      }
+
+      .titlePage {
+        display: grid;
+        height: 90vh;
+        place-items: center;
+        text-align: center;
+      }
+
+      .titlePage h1 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+        text-align: center;
+      }
+
+      .author {
+        font-weight: bold;
+        margin-bottom: 4rem;
+      }
     </style>
   </head>
   <body>  
     <article>
-    <header>
-      <h1>{{ bookData/title }}</h1>
-      <p>
-        <a href="{{ bookData/site }}" target="_blank">{{ bookData/creator }}</a>
-        {{ bookData/date }}
-      </p>
-      <p>
-        {{ bookData/rights }}
-      </p>
-    </header>
+    <section class="titlePage">
+      <div>
+        <div class="title">
+          <h1>{{ bookData/title }}</h1>
+          <p class="author">
+            {{ bookData/creator }}
+          </p>
+        </div>
+        <p>
+          {{ bookData/rights }}
+        </p>
+      </div>
+    </section>
     {{ @map(stories, (document, filename) => `
     <section>
-      <h2 id="{{ @basename(filename) }}">{{ document/title }}</h2>
+      <h1 id="{{ @basename(filename) }}">{{ document/title }}</h1>
       {{ marked.js(document/@text) }}
     </section>
     `) }}  
