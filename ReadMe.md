@@ -1,4 +1,4 @@
-This project explores using the [Origami](https://weborigami.org/language) language to create an ebook in the [EPUB](https://en.wikipedia.org/wiki/EPUB) format: a travel diary of a month-long hike across Japan in 2023.
+This project hosts an ebook travelogue of a month-long hike across Japan in 2023.
 
 ## Download the book
 
@@ -7,6 +7,8 @@ Download the file: [japan-hike.epub](https://github.com/WebOrigami/japan-hike-eb
 This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
 
 ## How the book is built
+
+This project explores using the [Origami](https://weborigami.org/language) language to create an ebook in the [EPUB](https://en.wikipedia.org/wiki/EPUB) format.
 
 Generally speaking, an EPUB file is a ZIP file containing a specific set of files. These files define things such as book metadata (title, author, etc), a table of contents, and XHTML pages for the chapter contents.
 
