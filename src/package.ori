@@ -1,26 +1,28 @@
-# Template for the EPUB package.opf file defining book metadata
-=`<?xml version="1.0" encoding="UTF-8"?>
+// Template for the EPUB package.opf file defining book metadata
+(images, bookData) => `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US">
-    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:identifier id="uid">{{ _/id }}</dc:identifier>
-        <dc:title>{{ _/title }}</dc:title>
-        <dc:creator>{{ _/creator }}</dc:creator>
-        <dc:language>{{ _/language }}</dc:language>
-        <dc:date>{{ _/date }}</dc:date>
-        <dc:rights>{{ _/rights }}</dc:rights>
-        <meta property="dcterms:modified">{{ _/date }}T00:00:00Z</meta>
-    </metadata>
-    <manifest>
-        <item id="page" href="index.xhtml" media-type="application/xhtml+xml" />
-        <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
-{{ @map(content/images, (image, filename) => `
-        <item id="{{ filename }}" href="images/{{ filename }}" media-type="image/jpeg" {{ 
-            @if(@equals(filename, "cover.jpg"), `properties="cover-image"`)
-        }} />
-`) }}
-    </manifest>
-    <spine>
-        <itemref idref="page" />
-    </spine>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="uid">${ bookData/id }</dc:identifier>
+    <dc:title>${ bookData/title }</dc:title>
+    <dc:creator>${ bookData/creator }</dc:creator>
+    <dc:language>${ bookData/language }</dc:language>
+    <dc:date>${ bookData/date }</dc:date>
+    <dc:rights>
+      ${ bookData/rights }
+    </dc:rights>
+    <meta property="dcterms:modified">${ bookData/date }T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="page" href="index.xhtml" media-type="application/xhtml+xml" />
+    <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
+${ @map(images, (image, filename) => `
+    <item id="${ filename }" href="images/${ filename }" media-type="image/jpeg" ${ 
+      @if(@equals(filename, "cover.jpg"), `properties="cover-image"`)
+    } />
+`) }
+  </manifest>
+  <spine>
+    <itemref idref="page" />
+  </spine>
 </package>
 `
