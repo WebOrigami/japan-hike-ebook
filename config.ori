@@ -1,0 +1,3 @@
+{
+  epub_handler = package:@weborigami/zip/epub_handler
+}
