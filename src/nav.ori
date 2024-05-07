@@ -14,11 +14,11 @@
   <body>
     <nav epub:type="toc" id="toc">
       <ol>
-{{ @map(stories, (document, filename) => `
+${ @map(stories, (document, filename) => `
         <li>
-          <a href="index.xhtml#{{ @basename(filename) }}">{{ document/title }}</a>
+          <a href="index.xhtml#${ @basename(filename) }">${ document/title }</a>
         </li>
-`) }}
+`) }
       </ol>
     </nav>
   </body>
