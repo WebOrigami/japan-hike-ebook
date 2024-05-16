@@ -1,4 +1,4 @@
-# Template for the EPUB nav.xhtml file used to generate the table of contents.
+// Template for the EPUB nav.xhtml file used to generate the table of contents.
 (stories) => `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html

@@ -6,7 +6,7 @@
 
   // This folder is built from the book data, images, and markdown.
   EPUB = {
-    images = @map(content/images, @image/resize({ width: 1200 }))
+    images = @map(content/images, @image/resizeFn({ width: 1200 }))
     index.xhtml = index.ori(content/markdown, content/book.yaml)
     nav.xhtml = nav.ori(content/markdown)
     package.opf = package.ori(content/images, content/book.yaml)

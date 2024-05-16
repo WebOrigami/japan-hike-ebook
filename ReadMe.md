@@ -2,7 +2,7 @@ This project hosts an ebook travelogue of a month-long hike across Japan in 2023
 
 ## Download the book
 
-Download the file: [japan-hike.epub](https://github.com/WebOrigami/japan-hike-ebook/raw/main/japan-hike.epub)
+Download the file: [japan-hike.epub](https://github.com/WebOrigami/japan-hike-ebook/raw/main/build/japan-hike.epub)
 
 This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
 

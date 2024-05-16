@@ -14,7 +14,7 @@
     "marked-xhtml": "1.0.9"
   },
   "scripts": {
-    "build": "ori epub_handler/pack src/ebook.ori > japan-hike.epub",
+    "build": "mkdir -p build; ori epub_handler/pack src/ebook.ori > build/japan-hike.epub",
     "docs": "ori @svg structure.yaml > diagram.svg",
     "preview": "rm -r preview; ori @copy src/ebook.ori, @files/preview",
     "start": "ori @serve @debug src/ebook.ori"
