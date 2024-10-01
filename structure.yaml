@@ -1,10 +1,10 @@
 # This file is used to generate the diagram showing the structure of the
 # generated ebook.
-META-INF:
+META-INF/:
   container.xml: Main ebook entry point
 mimetype: application/epub+zip
-EPUB:
-  images:
+EPUB/:
+  images/:
     cover.jpg: Cover image
     image1.jpg: (Additional images)
   index.xhtml: Book content
