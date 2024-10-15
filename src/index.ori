@@ -1,5 +1,6 @@
 // Template for the core index.xhtml file that contains the book content
-(stories, bookData) => `<?xml version="1.0" encoding="UTF-8"?>
+(stories, bookData) => @indent`
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html 
   xmlns="http://www.w3.org/1999/xhtml" 
@@ -66,11 +67,11 @@
         </p>
       </div>
     </section>
-    ${ @map(stories, (document, filename) => `
-    <section>
-      <h1 id="${ @basename(filename) }">${ document/title }</h1>
-      ${ marked.js(document/@text) }
-    </section>
+    ${ @map(stories, (document, filename) => @indent`
+<section>
+<h1 id="${ @basename(filename) }">${ document/title }</h1>
+${ marked.js(document/@text) }
+</section>
     `) }  
     </article>
   </body>

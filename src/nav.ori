@@ -1,5 +1,6 @@
 // Template for the EPUB nav.xhtml file used to generate the table of contents.
-(stories) => `<?xml version="1.0" encoding="UTF-8"?>
+(stories) => @indent`
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html
   xmlns="http://www.w3.org/1999/xhtml"
@@ -14,11 +15,11 @@
   <body>
     <nav epub:type="toc" id="toc">
       <ol>
-${ @map(stories, (document, filename) => `
-        <li>
-          <a href="index.xhtml#${ @basename(filename) }">${ document/title }</a>
-        </li>
-`) }
+        ${ @map(stories, (document, filename) => @indent`
+          <li>
+            <a href="index.xhtml#${ @basename(filename) }">${ document/title }</a>
+          </li>
+        `) }
       </ol>
     </nav>
   </body>
