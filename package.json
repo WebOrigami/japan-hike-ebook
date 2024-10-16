@@ -4,7 +4,7 @@
   "type": "module",
   "main": "main.js",
   "dependencies": {
-    "@weborigami/origami": "0.0.66",
+    "@weborigami/origami": "0.0.70",
     "@weborigami/zip": "0.0.6",
     "highlight.js": "11.9.0",
     "marked": "12.0.0",
