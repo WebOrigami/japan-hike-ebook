@@ -2,7 +2,7 @@ This project hosts an ebook travelogue of a month-long hike across Japan in 2023
 
 ## Download the book
 
-Download the file: [japan-hike.epub](https://github.com/WebOrigami/japan-hike-ebook/raw/main/build/japan-hike.epub)
+Download the file: [japan-hike.epub](https://github.com/WebOrigami/japan-hike-ebook/raw/main/japan-hike.epub)
 
 This can be opened in book readers like Apple Books or Calibre, or you can [send it to a Kindle](https://www.amazon.com/sendtokindle) reader.
 
@@ -31,7 +31,7 @@ The complete virtual tree looks like this:
 
 ![Diagram of the files in the sample EPUB book](diagram.svg)
 
-To create a readable ebook, that virtual tree of files is compressed into ZIP format and saved as an `.epub` file.
+To create a readable ebook, the Origami [epub extension](https://github.com/WebOrigami/extensions/tree/main/epub) compresses the virtual tree of files into EPUB format, essentially a ZIP file with a known structure.
 
 ## Rebuilding the ebook
 
@@ -44,10 +44,10 @@ $ npm install
 To preview the files that will go into the ebook:
 
 ```console
-$ npm run preview
+$ npm run build
 ```
 
-This will regenerate the `preview` folder and show everything that will go into the EPUB file.
+This will generate the `build` folder and show everything that will go into the EPUB file.
 
 To view the files in a browser:
 
@@ -60,7 +60,7 @@ You can then browse the generated, virtual files like `EPUB/nav.xhtml`.
 To build the ebook:
 
 ```console
-$ npm run build
+$ npm run build-book
 ```
 
 This will regenerate the `japan-hike.epub` file that you can open in an ebook reader.
