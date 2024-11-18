@@ -1,4 +1,4 @@
-import { replaceExtension } from "@weborigami/origami";
+import { extension } from "@weborigami/origami";
 import highlight from "highlight.js";
 import { marked } from "marked";
 import { gfmHeadingId as markedGfmHeadingId } from "marked-gfm-heading-id";
@@ -44,6 +44,6 @@ export default async function mdHtml(input) {
     : html;
 }
 
-mdHtml.keyMap = (sourceKey) => replaceExtension(sourceKey, ".md", ".html");
+mdHtml.keyMap = (sourceKey) => extension.replace(sourceKey, ".md", ".html");
 mdHtml.inverseKeyMap = (resultKey) =>
-  replaceExtension(resultKey, ".html", ".md");
+  extension.replace(resultKey, ".html", ".md");
