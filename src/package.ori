@@ -17,7 +17,7 @@
     <item id="nav" href="nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
 ${ map(images, (image, filename) => `
     <item id="${ filename }" href="images/${ filename }" media-type="image/jpeg" ${ 
-      if(equals(filename, "cover.jpg"), `properties="cover-image"`)
+      filename === "cover.jpg" ? `properties="cover-image"` : ""
     } />
 `) }
   </manifest>
