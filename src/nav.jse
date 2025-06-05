@@ -1,5 +1,5 @@
 // Template for the EPUB nav.xhtml file used to generate the table of contents.
-(stories) => indent`
+(stories) => Tree.indent`
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html
@@ -15,9 +15,9 @@
   <body>
     <nav epub:type="toc" id="toc">
       <ol>
-        ${ map(stories, (document, filename) => indent`
+        ${ Tree.map(stories, (document, filename) => Tree.indent`
           <li>
-            <a href="index.xhtml#${ basename(filename) }">${ document/title }</a>
+            <a href="index.xhtml#${ Origami.basename(filename) }">${ document.title }</a>
           </li>
         `) }
       </ol>

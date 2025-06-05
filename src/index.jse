@@ -1,5 +1,5 @@
 // Template for the core index.xhtml file that contains the book content
-(stories, bookData) => indent`
+(stories, bookData) => Tree.indent`
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html 
@@ -9,7 +9,7 @@
   xmlns:epub="http://www.idpf.org/2007/ops"
 >
   <head>
-    <title>${ bookData/title }</title>
+    <title>${ bookData.title }</title>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <style>
@@ -57,20 +57,20 @@
     <section class="titlePage">
       <div>
         <div class="title">
-          <h1>${ bookData/title }</h1>
+          <h1>${ bookData.title }</h1>
           <p class="author">
-            ${ bookData/creator }
+            ${ bookData.creator }
           </p>
         </div>
         <p>
-          ${ bookData/rights }
+          ${ bookData.rights }
         </p>
       </div>
     </section>
-    ${ map(stories, (document, filename) => indent`
+    ${ Tree.map(stories, (document, filename) => Tree.indent`
 <section>
-<h1 id="${ basename(filename) }">${ document/title }</h1>
-${ marked.js(document/@text) }
+<h1 id="${ Origami.basename(filename) }">${ document.title }</h1>
+${ <marked.js>(document._body) }
 </section>
     `) }  
     </article>
