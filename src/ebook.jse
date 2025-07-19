@@ -1,16 +1,16 @@
 // This Origami file defines the tree of files necessary for the EPUB format.
 {
   // Boilerplate files that don't depend on the book content
-  <META-INF>
-  <mimetype>
+  "META-INF/"
+  mimetype
 
   // This folder is built from the book data, images, and markdown.
   EPUB = {
-    images = Tree.map(<content/images>, (image) =>
+    images = Tree.map(content/images/, (image) =>
       Origami.image.resize(image, { width: 1200 })
     )
-    index.xhtml = <index.jse>(<content/markdown>, <content/book.yaml>)
-    nav.xhtml = <nav.jse>(<content/markdown>)
-    package.opf = <package.jse>(<content/images>, <content/book.yaml>)
+    index.xhtml = index.jse(content/markdown/, content/book.yaml)
+    nav.xhtml = nav.jse(content/markdown/)
+    package.opf = package.jse(content/images/, content/book.yaml)
   }
 }
