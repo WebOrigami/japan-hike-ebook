@@ -1,4 +1,4 @@
-import { extension } from "@weborigami/origami";
+import { extension } from "@weborigami/async-tree";
 import highlight from "highlight.js";
 import { marked } from "marked";
 import { gfmHeadingId as markedGfmHeadingId } from "marked-gfm-heading-id";
