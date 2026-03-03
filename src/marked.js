@@ -1,4 +1,3 @@
-import { extension } from "@weborigami/async-tree";
 import highlight from "highlight.js";
 import { marked } from "marked";
 import { gfmHeadingId as markedGfmHeadingId } from "marked-gfm-heading-id";
@@ -6,6 +5,7 @@ import { markedHighlight } from "marked-highlight";
 import { markedSmartypants } from "marked-smartypants";
 import { markedXhtml } from "marked-xhtml";
 
+// Add XHTML support to the options generally used by Origami
 marked.use(
   markedGfmHeadingId(),
   markedHighlight({
@@ -19,31 +19,8 @@ marked.use(
   markedSmartypants(),
   {
     gfm: true, // Use GitHub-flavored markdown.
-    // @ts-ignore
-    mangle: false,
   },
-  markedXhtml()
+  markedXhtml(),
 );
 
-/**
- * @typedef {import("@weborigami/async-tree").StringLike} StringLike
- * @typedef {import("@weborigami/async-tree").Unpackable<StringLike>} UnpackableStringlike
- *
- * @this {import("@weborigami/types").AsyncTree|null|void}
- * @param {StringLike|UnpackableStringlike} input
- */
-export default async function mdHtml(input) {
-  if (/** @type {any} */ (input).unpack) {
-    input = await /** @type {any} */ (input).unpack();
-  }
-  const inputDocument = input["@text"] ? input : null;
-  const markdown = inputDocument?.["@text"] ?? String(input);
-  const html = marked(markdown);
-  return inputDocument
-    ? Object.assign({}, inputDocument, { "@text": html })
-    : html;
-}
-
-mdHtml.keyMap = (sourceKey) => extension.replace(sourceKey, ".md", ".html");
-mdHtml.inverseKeyMap = (resultKey) =>
-  extension.replace(resultKey, ".html", ".md");
+export default marked;
