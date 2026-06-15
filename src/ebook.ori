@@ -5,7 +5,7 @@
   mimetype
 
   // This folder is built from the book data, images, and markdown.
-  EPUB = {
+  EPUB: {
     images = Tree.map(content/images/, (image) =>
       Origami.image.resize(image, { width: 1200 })
     )
