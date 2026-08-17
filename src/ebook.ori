@@ -6,7 +6,7 @@
 
   // This folder is built from the book data, images, and markdown.
   EPUB: {
-    images = Tree.map(content/images/, (image) =>
+    images/ = Tree.map(content/images/, (image) =>
       Origami.image.resize(image, { width: 1200 })
     )
     index.xhtml = index.ori(content/markdown/, content/book.yaml)

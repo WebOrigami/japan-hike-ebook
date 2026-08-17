@@ -31,7 +31,7 @@ The complete virtual tree looks like this:
 
 ![Diagram of the files in the sample EPUB book](diagram.svg)
 
-To create a readable ebook, the Origami [epub extension](https://github.com/WebOrigami/extensions/tree/main/epub) compresses the virtual tree of files into EPUB format, essentially a ZIP file with a known structure.
+To create a readable ebook, the Origami [epub handler](https://weborigami.org/language/filetypes#epub-files) compresses the virtual tree of files into EPUB format, essentially a ZIP file with a known structure.
 
 ## Rebuilding the ebook
 
